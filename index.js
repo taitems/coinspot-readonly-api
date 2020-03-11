@@ -38,7 +38,8 @@ function coinspot(key, secret) {
                 data += chunk;
             });
             resp.on('end', chunk => {
-                callback(null, data);
+                const jsonData = JSON.parse(data);
+                callback(null, jsonData);
             });
         }).on("error", e => {
             callback(e, data);

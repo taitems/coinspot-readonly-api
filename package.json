@@ -1,7 +1,7 @@
 {
   "name": "coinspot-readonly-api",
-  "version": "1.0.1",
-  "description": "",
+  "version": "1.0.2",
+  "description": "Read-only API client for coinspot.com.au",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,5 +18,17 @@
   },
   "bugs": {
     "url": "https://github.com/taitems/coinspot-readonly-api/issues"
-  }
+  },
+  "contributors": [
+    "Russel Wilson (https://github.com/rtw)"
+  ],
+  "keywords": [
+    "btc",
+    "bitcoin",
+    "litecoin",
+    "ltc",
+    "dogecoin",
+    "doge",
+    "coinspot"
+  ]
 }
