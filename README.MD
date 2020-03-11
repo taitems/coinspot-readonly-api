@@ -39,3 +39,5 @@ coinspotClient.balances((e, data) => {
 
 #### Support
 Bitcoin (Coinspot!) address: `1J1PbX42RYYk1auWe1ujGunM9cdP1xW4wF`
+
+![Bitcoin Address](https://i.imgur.com/CHgxzrl.png)
