@@ -21,6 +21,12 @@ coinspotClient.balances((e, data) => {
     console.log(data);
 });
 
+// Check balance by coin
+// eg: 'BTC', 'LTC', 'DOGE' -- appears to be case insensitive
+coinspotClient.balanceByCoin('BTC', (e, data) => {
+    console.log(data);
+});
+
 // List deposits - note empty params
 coinspotClient.deposits({}, (e, data) => {
     console.log(data);

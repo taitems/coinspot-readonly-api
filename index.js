@@ -53,8 +53,12 @@ function coinspot(key, secret) {
         request('/api/ro/my/balances', {}, callback);
     }
 
+    self.balanceByCoin = (cointype, callback) => {
+        request(`/api/ro/my/balance/${cointype}`, {}, callback);
+    }
+
     self.deposits = (params, callback) => {
-        request(`/api/ro/my/deposits/`, params, callback);
+        request(`/api/ro/my/deposits`, params, callback);
     }
 
     self.referralPayments = callback => {
