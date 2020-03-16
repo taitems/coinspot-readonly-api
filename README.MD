@@ -8,15 +8,32 @@ Forked from the [original SDK](https://github.com/rtw/npm-coinspot-api) which di
 
 #### Example Usage
 
-```
+```js
 var coinspot = require('coinspot-api');
 
-var secret = ''; // insert your secret here
 var key = ''; // insert your key here
+var secret = ''; // insert your secret here
 
-var client = new coinspot(key, secret);
+var coinspotClient = new coinspot(key, secret);
 
+// Simple balance check
 coinspotClient.balances((e, data) => {
+    console.log(data);
+});
+
+// List deposits - note empty params
+coinspotClient.balances({}, (e, data) => {
+    console.log(data);
+});
+
+// List deposits - with start and/or end date
+// Note lowercase startdate/enddate
+coinspotClient.balances({ startdate: '2020-01-01'}, (e, data) => {
+    console.log(data);
+});
+
+// List referral payments
+coinspotClient.referralPayments((e, data) => {
     console.log(data);
 });
 ```
@@ -27,7 +44,7 @@ coinspotClient.balances((e, data) => {
 |----------------------------------|------------|
 | List My Balances | ✅ **Yes** |
 | List a Coins Balance | 🕑 Not yet |
-| List Deposit History | 🕑 Not yet |
+| List Deposit History | ✅ **Yes** |
 | List Withdrawal History | 🕑 Not yet |
 | List Transaction History | 🕑 Not yet |
 | List Coin Transaction History | 🕑 Not yet |
@@ -35,7 +52,7 @@ coinspotClient.balances((e, data) => {
 | List Coins Open Transactions | 🕑 Not yet |
 | List Send & Receive Transactions | 🕑 Not yet |
 | List My Affiliate Payments | 🕑 Not yet |
-| List My Referral Payments | 🕑 Not yet |
+| List My Referral Payments | ✅ **Yes** |
 
 #### Support
 Bitcoin (Coinspot!) address: `1J1PbX42RYYk1auWe1ujGunM9cdP1xW4wF`
