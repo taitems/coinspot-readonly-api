@@ -49,7 +49,7 @@ coinspotClient.referralPayments((e, data) => {
 | Query                            | Supported  |
 |----------------------------------|------------|
 | List My Balances | ✅ **Yes** |
-| List a Coins Balance | 🕑 Not yet |
+| List a Coins Balance | ✅ **Yes** |
 | List Deposit History | ✅ **Yes** |
 | List Withdrawal History | 🕑 Not yet |
 | List Transaction History | 🕑 Not yet |
