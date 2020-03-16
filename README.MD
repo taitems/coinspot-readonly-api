@@ -22,13 +22,13 @@ coinspotClient.balances((e, data) => {
 });
 
 // List deposits - note empty params
-coinspotClient.balances({}, (e, data) => {
+coinspotClient.deposits({}, (e, data) => {
     console.log(data);
 });
 
 // List deposits - with start and/or end date
 // Note lowercase startdate/enddate
-coinspotClient.balances({ startdate: '2020-01-01'}, (e, data) => {
+coinspotClient.deposits({ startdate: '2020-01-01'}, (e, data) => {
     console.log(data);
 });
 
